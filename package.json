@@ -1,6 +1,6 @@
 {
-  "name": "solidity",
-  "description": "Ethereum Solidity Language for Visual Studio Code",
+  "name": "@contractshark/solidity-language-server",
+  "description": "Ethereum Solidity Language Server",
   "keywords": [
     "solidity",
     "ethereum",
@@ -20,12 +20,12 @@
     "Juan Blanco"
   ],
   "bugs": {
-    "url": "https://github.com/juanfranblanco/vscode-solidity/issues"
+    "url": "https://github.com/contractshark/vscode-solidity/issues"
   },
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/juanfranblanco/vscode-solidity"
+    "url": "https://github.com/contractshark/vscode-solidity"
   },
   "categories": [
     "Programming Languages",
@@ -44,7 +44,14 @@
     "onCommand:solidity.codegenFSharpProjectAll",
     "onCommand:solidity.fixDocument"
   ],
-  "main": "./out/src/extension",
+  "main": "./out/src/solidity-language-server.js",
+  "files": [
+    "out/src/",
+    "src/"
+  ],
+  "bin": {
+    "solidity-language-server": "./out/src/solidity-language-server.js"
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
